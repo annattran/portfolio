@@ -1,0 +1,281 @@
+.pageContent {
+  position: relative;
+}
+
+header::before {
+    content:'';
+    height:250px;
+    width:250px;
+    border-radius:100%;
+    background:$primaryColor;
+    position: fixed;
+    top:-150px;
+    left:-150px;
+    z-index:-1;
+}
+
+.hamburgerContainer {
+  content: '';
+  height:50px;
+  width: 50px;
+  border-radius:100%;
+  background:$primaryColor;
+  position: fixed;
+  cursor:pointer;
+  right:20px;
+  z-index:100;
+}
+
+.hamburgerIcon {
+  width: 20px;
+  position: absolute;
+  top:10px;
+  right:15px;
+}
+
+.topBar,
+.middleBar,
+.bottomBar {
+    content: '';
+    display: block;
+    /* BREAK ONTO A NEW LINE AND ACCEPT DIMENSIONS */
+}
+
+.topBar,
+.middleBar,
+.bottomBar {
+  background-color: white;
+  border-radius: 3px;
+  height: 2px;
+  margin: 6px 0;
+  transition: all .5s ease-in-out;
+}
+
+.hamburgerIcon:hover .topBar,
+.hamburgerIcon:focus .topBar,
+.hamburgerIcon:active .topBar,
+.topBarActive {
+  transform: translateY(8px) rotate(135deg);
+}
+
+.hamburgerIcon:hover .bottomBar,
+.hamburgerIcon:focus .bottomBar,
+.hamburgerIcon:active .bottomBar,
+.bottomBarActive {
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+.hamburgerIcon:hover .middleBar,
+.hamburgerIcon:focus .middleBar,
+.hamburgerIcon:active .middleBar,
+.middleBarActive {
+  transform: scale(0);
+  /* MAKES THE DIV DISAPPEAR */
+}
+
+
+
+
+
+ /* The side navigation menu */
+aside {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: $primaryColor; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+aside a {
+  padding: 16px 0px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside i {
+  font-size:1.5rem;
+  padding: 3px 0px;
+  @media (min-width:680px) {
+    font-size:2rem;
+  }
+}
+
+/* When you mouse over the navigation links, change their color */
+aside a:hover, aside a:focus, aside a:active {
+  color: $primaryColor;
+  background:white;
+}
+
+
+.addWidth {
+  width: 100px;
+}
+
+.addMargin {
+  margin-left: 100px;
+}
+
+.contactInfo {
+  display:none;
+  margin: 20px 50px 0px 50px;
+}
+
+.contactIcons {
+  display:flex;
+  i {
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius:100%;
+    font-size:1rem;
+    background:$secondColor;
+    color:$thirdColor;
+    margin-right: 10px;
+  }
+}
+
+@media(min-width:470px) {
+  header::before {
+      top:-130px;
+      left:-130px;
+    }
+}
+
+@media(min-width:1025px) {
+    header::before {
+      height:350px;
+      width:350px;
+      top:-200px;
+      left:-180px;
+    }
+}
+
+@media (min-width:925px) {
+    .hamburgerContainer {
+        display:none;
+    }
+    aside {
+      width: 400px;
+      background:none;
+    }
+    aside a {
+      transition:none;
+    }
+    main {
+      margin-left: 400px;
+    }
+    .headerContent {
+      position: fixed;
+      margin-top: -40px;
+    }
+    .aboutMe {
+      margin-top: 40px;
+    }
+    .contactInfo {
+      display:block;
+    }
+
+
+
+
+    .circleMenu {
+        position: relative;
+        z-index:100;
+        width: 400px;
+        height: 400px;
+        margin: 0px auto;
+    }
+    .circleMenu ul {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        margin: 80px 50px 50px 50px;
+        border: 5px solid $secondColor;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .circleMenu .center{
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        top: 192px;
+        left: 162px;
+        z-index: 1;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+
+    
+    .circleMenu li {
+        position: absolute;
+        top: -15px;
+        left: -15px; 
+        width: 160px;
+        height: 160px;
+        transform-origin: 100% 100%;
+        overflow: hidden;
+    }
+
+    .circleMenu a{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+
+    .inactivePage {
+      color:$secondColor;
+    }
+    
+    .circleMenu li:hover, .circleMenu li:focus, .circleMenu li:active,
+    .circleMenu a:hover, .circleMenu a:focus, .circleMenu a:active,
+    .activePage {
+      background:$secondColor;
+      color:$primaryColor;
+    }
+    .circleMenu li:nth-child(1) {
+        transform: rotate(45deg) skew(0deg);
+        a {
+          transform:rotate(-45deg);
+          text-align:center;
+          padding-top: 60px;
+        }
+    }
+    .circleMenu li:nth-child(2) {
+        transform: rotate(135deg) skew(0deg);
+        a {
+          transform:rotate(-135deg);
+          text-align:center;
+          padding-top: 60px;
+        }
+    }
+    .circleMenu li:nth-child(3) {
+        transform: rotate(225deg) skew(0deg);
+        a {
+          transform:rotate(-225deg);
+          text-align:center;
+          padding-top: 60px;
+        }
+    }
+    .circleMenu li:nth-child(4) {
+        transform: rotate(315deg) skew(0deg);
+        a {
+          transform:rotate(-315deg);
+          text-align:center;
+          padding-top: 60px;
+        }
+    }
+}

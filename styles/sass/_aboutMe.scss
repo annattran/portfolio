@@ -1,0 +1,173 @@
+.aboutMe {
+    overflow:hidden;
+    .images {
+        display:flex;
+        height:165px;
+        position: relative;
+    }
+    img {
+        // width:165px;
+        width:calc((100% / 2) + 25px);
+        border-radius:100%;
+        position: absolute;
+    }
+    img:first-child {
+        left:-30px;
+    }
+    img:last-child {
+        right:-30px;
+    }
+    .buttons {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+}
+
+@media (min-width:303px) {
+    .aboutMe {
+        .images {
+            height:185px;
+        }
+    }
+}
+
+@media (min-width:343px) {
+    .aboutMe {
+        .images {
+            height:205px;
+        }
+    }
+}
+
+@media (min-width:383px) {
+    .aboutMe {
+        .images {
+            height:225px;
+        }
+    }
+}
+
+@media (min-width:423px) {
+    .aboutMe {
+        .images {
+            height:245px;
+        }
+    }
+}
+
+@media (min-width:463px) {
+    .aboutMe {
+        .images {
+            height:265px;
+        }
+    }
+}
+
+@media (min-width:470px) {
+    .aboutMe {
+        .images {
+            justify-content: space-between;
+            height:auto;
+            position:static;
+            width:80%;
+            margin: 0 auto;
+        }
+        img {
+            // width:165px;
+            width:calc((100% / 2) - 5px);
+            border-radius:100%;
+            position: static;
+        }
+        img:first-child {
+            left:5px;
+        }
+        img:last-child {
+            right:5px;
+        }
+        .buttons {
+            flex-direction:row;
+        }
+        .coloredButton {
+            margin-left:40px;
+            width: 40%;
+            z-index:1;
+        }
+        .greyButton {
+            position: relative;
+            left:-40px;
+            width:60%;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media (min-width:600px) {
+    .aboutMe{
+        .buttons {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width:750px) {
+    .aboutMe{
+        .buttons{
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width:900px) {
+    .aboutMe{
+        .buttons{
+            width: 60%;
+        }
+    }
+}
+
+.singleExperience {
+    display:flex;
+    p {
+        margin:0px 0px 10px 0px;
+    }
+}
+
+.singleExperience:nth-of-type(3) {
+    margin-bottom: 40px;
+}
+
+.experienceLine {
+    content:'';
+    height:180px;
+    width:10px;
+    margin-right: 40px;
+    background:$secondColor;
+    position: relative;
+    border-radius:5px;
+}
+
+.experienceDot {
+    content:'';
+    position: absolute;
+    top:-5px;
+    width:10px;
+    height:10px;
+    border-radius:100%;
+    background:$primaryColor;
+}
+
+.experienceContent {
+    width:calc(100% - 6px);
+}
+
+.date, .jobTitle {
+    font-weight:700;
+}
+
+.jobTitle {
+    font-size:.9rem;
+}

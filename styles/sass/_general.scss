@@ -1,0 +1,172 @@
+html {
+    font-size:125%;
+    font-family: $primaryFont;
+}
+
+h1, h2, h3, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style:none;
+}
+
+h1 {
+    font-size:1.5rem;
+    margin-top: 20px;
+    @media (min-width:680px) {
+        font-size:2rem;
+    }
+    @media (min-width:1025px) {
+        margin-top: 40px;
+    }
+}
+
+h2 {
+    font-size:1rem;
+    position: relative;
+    margin: 20px 0px;
+    @media (min-width:680px) {
+        font-size:1.2rem;
+        margin: 40px 0px 20px 0px;
+    }
+}
+
+h2::after {
+    content:'';
+    width:30px;
+    height:3px;
+    background:$primaryColor;
+    position:absolute;
+    bottom:-10px;
+    left:0;
+}
+
+h3, aside p {
+    font-size:.8rem;
+    @media (min-width:680px) {
+        font-size:.9rem;
+    }
+}
+
+p, button h3, label, input, textarea {
+    font-size:.7rem;
+    @media (min-width:680px) {
+        font-size:.8rem;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h1 ~ p {
+    margin-bottom: 40px;
+}
+
+h2 ~ p, h3 ~ p {
+    margin: 10px 0px;
+}
+
+p ~ p {
+    margin-bottom: 40px;
+}
+
+p {
+    line-height:1.5;
+}
+
+button {
+    background:none;
+    border:1px solid transparent;
+    outline:none;
+    padding:6px;
+    margin: 3px;
+    width:100%;
+    border-radius:25px;
+}
+
+button a {
+    display:block;
+    width:100%;
+}
+
+@media (min-width:470px) {
+    button {
+        padding: 8px;
+    }
+}
+
+.color {
+    color: $primaryColor;
+}
+
+.wrapper {
+    width:80%;
+    margin: 0 auto;
+    @media (min-width:680px) {
+        width: 90%;
+    }
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 5px;
+}
+
+.coloredButton, .greyButton {
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.coloredButton {
+    background:$primaryColor;
+    color:white;
+}
+
+.greyButton {
+    background:$secondColor;
+    color:$thirdColor;
+}
+
+.coloredButton::before,
+.greyButton::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius:25px;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.coloredButton:hover, .coloredButton:focus, .coloredButton:active,
+.greyButton:hover, .greyButton:focus, .greyButton:active {
+    color: $primaryColor;
+    border:1px solid $primaryColor;
+}
+
+.coloredButton:hover:before, .coloredButton:focus:before, .coloredButton:active:before,
+.greyButton:hover:before, .greyButton:focus:before, .greyButton:active:before {
+    transform: scale(1);
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}

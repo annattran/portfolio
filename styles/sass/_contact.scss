@@ -1,0 +1,38 @@
+input, textarea {
+    width:100%;
+}
+
+textarea {
+    resize:none;
+    height:150px;
+}
+
+.contact .coloredButton {
+    margin-top: 20px;
+}
+
+@media (min-width:470px) {
+    .contact .coloredButton {
+        width: 50%;
+        align-self:center;
+    }
+    form {
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:680px) {
+    form {
+        width:60%;
+    }
+}
+
+@media (min-width:925px) {
+    .contact .coloredButton {
+        width: 30%;
+    }
+    form {
+        width: 100%;
+    }
+}
