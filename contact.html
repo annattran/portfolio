@@ -61,7 +61,9 @@
                 <!-- CONTAINER FOR HAMBURGER ICON (CONTROLS THE WIDTH) -->
                 <div class="hamburgerIcon">
                     <!-- EMPTY DIV FOR HAMBURGER ICON (DRAWING THE BARS) -->
-                    <div></div>
+                    <span class="topBar"></span>
+                    <span class="middleBar"></span>
+                    <span class="bottomBar"></span>
                 </div>
             </div>
 
@@ -74,16 +76,28 @@
         <main>
             <section class="contact wrapper">
                 <h2>Contact.</h2>
-                <p>Get in touch</p>
-                <form action="submit">
-                    <label for="">Name</label>
-                    <input type="text">
-                    <label for="">Email</label>
-                    <input type="text">
-                    <label for="">Message</label>
-                    <textarea></textarea>
+                <p>Interested in my work? Let's meet!</p>
+                <form method="POST" action="http://www.focuspocus.io/magic/annatran93@gmail.com">
+                    <div class="nameAndEmailFields">
+                        <div class="singleFormField">
+                            <label for="name" class="visuallyHidden">Your Name <span class="required">*</span></label>
+                            <input type="text" name="Name" placeholder="Your Name *" required>
+                        </div>
+                        <div class="singleFormField">
+                            <label for="email" class="visuallyHidden">Your Email <span class="required">*</span></label>
+                            <input type="text" name="Email" placeholder="Your Email *" required>
+                        </div>
+                    </div>
+                    <div class="singleFormField">
+                        <label for="subject" class="visuallyHidden">Subject</label>
+                        <input type="text" name="Subject" placeholder="Subject">
+                    </div>
+                    <div class="singleFormField">
+                        <label for="message" class="visuallyHidden">Message <span class="required">*</span></label>
+                        <textarea name="Message" placeholder="Message *" required></textarea>
+                    </div>
                     <button class="coloredButton">
-                        <h3>Send Message</h3>
+                        <h3>Send</h3>
                     </button>
                 </form>
             </section>
@@ -137,6 +151,22 @@
             topBar.classList.toggle("topBarActive");
             middleBar.classList.toggle("middleBarActive");
             bottomBar.classList.toggle("bottomBarActive");
+        });
+
+        const inputs = document.getElementsByTagName("input");
+        const textarea = document.getElementsByTagName("textarea")[0];
+        
+        for(i=0;i<inputs.length;i++){
+            const eachInput = inputs[i];
+            eachInput.addEventListener("input", function() {
+                eachInput.previousSibling.previousSibling.classList.remove("visuallyHidden");
+                eachInput.placeholder = "";
+            });
+        };
+
+        textarea.addEventListener("input", function() {
+            textarea.previousSibling.previousSibling.classList.remove("visuallyHidden");
+            textarea.placeholder = "";
         });
 
     </script>

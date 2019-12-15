@@ -873,8 +873,32 @@ aside a:hover, aside a:focus, aside a:active {
   font-size: .9rem;
 }
 
+.singleFormField {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  font-size: 12px;
+  background: white;
+  top: 12px;
+  left: 10px;
+  padding: 0px 5px;
+}
+
+.required {
+  color: #01d3a9;
+}
+
 input, textarea {
   width: 100%;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid #e8e8e8;
+  margin-top: 20px;
+  background: none;
+  padding: 15px 15px 10px 15px;
 }
 
 textarea {
@@ -882,17 +906,16 @@ textarea {
   height: 150px;
 }
 
+input:focus, textarea:focus {
+  border: 2px solid #01d3a9;
+}
+
 .contact .coloredButton {
   margin-top: 20px;
+  width: 100px;
 }
 
 @media (min-width: 470px) {
-  .contact .coloredButton {
-    width: 50%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
   form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -911,11 +934,19 @@ textarea {
 }
 
 @media (min-width: 925px) {
-  .contact .coloredButton {
-    width: 30%;
-  }
   form {
     width: 100%;
+  }
+  .nameAndEmailFields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nameAndEmailFields .singleFormField:first-child {
+    margin-right: 20px;
+  }
+  .nameAndEmailFields .singleFormField {
+    width: calc(50% - 10px);
   }
 }
 
