@@ -1,0 +1,68 @@
+.portfolio {
+    .iconsAndMonitor {
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: flex-end;
+    }
+    ul {
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
+    li {
+        width: 40px;
+        display:flex;
+        justify-content: center;
+        cursor:pointer;
+    }
+    img {
+        max-width: 100%;
+        transition:all .3s;
+    }
+    li img:hover {
+        background:$secondColor;
+        border-radius:100%;
+        padding: 10px;
+    }
+    .selectedIcon {
+        background:$secondColor;
+        border-radius:100%;
+        padding: 10px;
+    }
+
+    .laptop {
+        margin-right: 20px;
+        width:400px;
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        // overflow:hidden;
+    }
+    .monitor {
+        content:'';
+        position: absolute;
+        width: 75%;
+        z-index:-1;
+    }
+}
+
+
+@media(max-width:680px) {
+    .portfolio {
+        .iconsAndMonitor {
+            flex-direction:column;
+        }
+        ul {
+            flex-direction:row;
+            margin-bottom: 20px;
+        }
+        .laptop {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:590px){
+
+}

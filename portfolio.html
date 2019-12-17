@@ -76,10 +76,30 @@
         <main>
             <section class="portfolio wrapper">
                 <h2>Portfolio.</h2>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <p>Check out some of my most recent works!</p>
+                <p>Click an icon <span class="iconPosition">on the right</span> to view a project and find out more.</p>
+                <div class="iconsAndMonitor">
+                    <ul class="projectIcons">
+                        <li class="projectIcon marioMatchMania">
+                            <img src="assets/marioMatchMania.png" alt="">
+                        </li>
+                        <li class="projectIcon weddingGuestbook selectedIcon">
+                            <img src="assets/weddingGuestbook.png" alt="">
+                        </li>
+                        <li class="projectIcon payrollTimesheet">
+                            <img src="assets/weeklyPayroll.png" alt="">
+                        </li>
+                        <li class="projectIcon dineAndDash">
+                            <img src="assets/dineAndDash.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="laptop">
+                        <img src="assets/laptop.png" alt="">
+                        <div class="monitor">
+                            <img src="assets/weddingGuestbook.gif">
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="project wrapper">
                 <h2>Project.</h2>
@@ -94,6 +114,7 @@
         </main>
     </div>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script> -->
     <script>
         const navigationToggle = document.getElementsByClassName("hamburgerIcon")[0];
         const navigationMenu = document.getElementsByTagName("aside")[0];
@@ -137,6 +158,38 @@
             topBar.classList.toggle("topBarActive");
             middleBar.classList.toggle("middleBarActive");
             bottomBar.classList.toggle("bottomBarActive");
+        });
+
+        const projectIcons = document.getElementsByClassName("projectIcon");
+        const monitor = document.getElementsByClassName("monitor")[0];
+        
+        for(i=0;i<projectIcons.length;i++){
+            const eachProjectIcon = projectIcons[i];
+
+            eachProjectIcon.addEventListener("click", function() {
+
+                const specificProject = eachProjectIcon.classList[1];
+                monitor.innerHTML = (`<img src="assets/${specificProject}.gif">`);
+                
+                const siblingIcons = document.querySelectorAll("li.projectIcon:not(this)");
+                
+                for(i=0;i<siblingIcons.length;i++){
+                    siblingIcons[i].classList.remove("selectedIcon");
+                    this.classList.add("selectedIcon");
+                }
+            });
+        };
+        
+        const iconPosition = document.getElementsByClassName("iconPosition")[0];
+        console.log(iconPosition)
+
+        window.addEventListener("resize", function() {
+            //when window is greater than 925 pixels
+            if(window.matchMedia("(max-width:680px)").matches){
+                iconPosition.innerText = "below"
+            } else {
+                iconPosition.innerText = "on the right"
+            }
         });
 
     </script>

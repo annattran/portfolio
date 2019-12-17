@@ -8,9 +8,9 @@ header::before {
     width:250px;
     border-radius:100%;
     background:$primaryColor;
-    position: fixed;
-    top:-150px;
+    top:-170px;
     left:-150px;
+    position:absolute;
     z-index:-1;
 }
 
@@ -149,17 +149,8 @@ aside a:hover, aside a:focus, aside a:active {
 
 @media(min-width:470px) {
   header::before {
-      top:-130px;
+      top:-150px;
       left:-130px;
-    }
-}
-
-@media(min-width:1025px) {
-    header::before {
-      height:350px;
-      width:350px;
-      top:-200px;
-      left:-180px;
     }
 }
 
@@ -176,6 +167,9 @@ aside a:hover, aside a:focus, aside a:active {
     }
     main {
       margin-left: 400px;
+    }
+    header::before {
+      position: fixed;
     }
     .headerContent {
       position: fixed;
@@ -277,5 +271,14 @@ aside a:hover, aside a:focus, aside a:active {
           text-align:center;
           padding-top: 60px;
         }
+    }
+}
+
+@media(min-width:1025px) {
+    header::before {
+      height:350px;
+      width:350px;
+      top:-205px;
+      left:-180px;
     }
 }

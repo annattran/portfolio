@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/276b65d818.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <aside>
+        <nav class="circleMenu">
+            <div class="center"></div>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-user-circle"></i>
+                        <p>About</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio.html">
+                        <i class="fas fa-archive"></i>
+                        <p>Portfolio</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="skills.html">
+                        <i class="fas fa-star"></i>
+                        <p>Skills</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fas fa-address-card"></i>
+                        <p>Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="contactInfo">
+            <h3>Connect with me!</h3>
+            <div class="contactIcons">
+                <a href="mailto:annatran93@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="http://www.linkedin.com/in/annattran" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="http://www.twitter.com/itsannatran" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://www.github.com/annatran93" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="pageContent">
+        <header class="wrapper">
+
+            <div class="hamburgerContainer">
+                <!-- CONTAINER FOR HAMBURGER ICON (CONTROLS THE WIDTH) -->
+                <div class="hamburgerIcon">
+                    <!-- EMPTY DIV FOR HAMBURGER ICON (DRAWING THE BARS) -->
+                    <span class="topBar"></span>
+                    <span class="middleBar"></span>
+                    <span class="bottomBar"></span>
+                </div>
+            </div>
+
+            <div class="headerContent">
+                <h1>Anna Tran<span class="color">.</span></h1>
+                <p>Front end web developer.</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="contact wrapper">
+                <h2>Thank you.</h2>
+                <p>Your email has been sent.</p>
+            </section>
+
+            <footer class="wrapper">
+                <p>Copyright 2019</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        const navigationToggle = document.getElementsByClassName("hamburgerIcon")[0];
+        const navigationMenu = document.getElementsByTagName("aside")[0];
+        const pageContent = document.getElementsByClassName("pageContent")[0];
+
+        navigationToggle.addEventListener("click", function () {
+            navigationMenu.classList.toggle("addWidth");
+            pageContent.classList.toggle("addMargin");
+        });
+
+        window.addEventListener("resize", function() {
+            //when window is greater than 925 pixels
+            if(window.matchMedia("(min-width:925px)").matches){
+                navigationMenu.classList.remove("addWidth");
+                pageContent.classList.remove("addMargin");
+            }
+        });
+
+        const pages = document.getElementsByClassName("circleMenu")[0].getElementsByTagName("a");
+
+        for(i=0;i<pages.length;i++){
+            if(pages[i].href === location.href) {
+                pages[i].classList.add("activePage");
+                pages[i].parentNode.classList.add("activePage");
+                pages[i].classList.remove("inactivePage");
+                pages[i].parentNode.classList.remove("inactivePage");
+            } else {
+                pages[i].classList.add("inactivePage");
+                pages[i].parentNode.classList.add("inactivePage");
+                pages[i].classList.remove("activePage");
+                pages[i].parentNode.classList.remove("activePage");
+            }
+        };
+
+        const hamburgerIcon = document.getElementsByClassName("hamburgerIcon")[0];
+        const topBar = document.getElementsByClassName("topBar")[0];
+        const middleBar = document.getElementsByClassName("middleBar")[0];
+        const bottomBar = document.getElementsByClassName("bottomBar")[0];
+        
+        hamburgerIcon.addEventListener("click", function() {
+            topBar.classList.toggle("topBarActive");
+            middleBar.classList.toggle("middleBarActive");
+            bottomBar.classList.toggle("bottomBarActive");
+        });
+
+        const inputs = document.getElementsByTagName("input");
+        const textarea = document.getElementsByTagName("textarea")[0];
+        
+        for(i=0;i<inputs.length;i++){
+            const eachInput = inputs[i];
+            eachInput.addEventListener("input", function() {
+                eachInput.previousSibling.previousSibling.classList.remove("visuallyHidden");
+                eachInput.placeholder = "";
+            });
+        };
+
+        textarea.addEventListener("input", function() {
+            textarea.previousSibling.previousSibling.classList.remove("visuallyHidden");
+            textarea.placeholder = "";
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -392,9 +392,9 @@ header::before {
   width: 250px;
   border-radius: 100%;
   background: #01d3a9;
-  position: fixed;
-  top: -150px;
+  top: -170px;
   left: -150px;
+  position: absolute;
   z-index: -1;
 }
 
@@ -564,17 +564,8 @@ aside a:hover, aside a:focus, aside a:active {
 
 @media (min-width: 470px) {
   header::before {
-    top: -130px;
+    top: -150px;
     left: -130px;
-  }
-}
-
-@media (min-width: 1025px) {
-  header::before {
-    height: 350px;
-    width: 350px;
-    top: -200px;
-    left: -180px;
   }
 }
 
@@ -592,6 +583,9 @@ aside a:hover, aside a:focus, aside a:active {
   }
   main {
     margin-left: 400px;
+  }
+  header::before {
+    position: fixed;
   }
   .headerContent {
     position: fixed;
@@ -692,6 +686,15 @@ aside a:hover, aside a:focus, aside a:active {
             transform: rotate(-315deg);
     text-align: center;
     padding-top: 60px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header::before {
+    height: 350px;
+    width: 350px;
+    top: -205px;
+    left: -180px;
   }
 }
 
@@ -947,6 +950,101 @@ input:focus, textarea:focus {
   }
   .nameAndEmailFields .singleFormField {
     width: calc(50% - 10px);
+  }
+}
+
+.portfolio .iconsAndMonitor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.portfolio ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.portfolio li {
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.portfolio img {
+  max-width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.portfolio li img:hover {
+  background: #e8e8e8;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.portfolio .selectedIcon {
+  background: #e8e8e8;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.portfolio .laptop {
+  margin-right: 20px;
+  width: 400px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio .monitor {
+  content: '';
+  position: absolute;
+  width: 75%;
+  z-index: -1;
+}
+
+@media (max-width: 680px) {
+  .portfolio .iconsAndMonitor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .portfolio .laptop {
+    width: 100%;
   }
 }
 
