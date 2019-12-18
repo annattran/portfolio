@@ -46,10 +46,6 @@
     // h3 {
     //     margin-top: 40px;
     // }
-    .projects {
-        display:flex;
-        padding:40px 0px;
-    }
     .projectDescription {
         width: 50%;
         margin-right: 40px;
@@ -74,6 +70,7 @@
     .display {
         display:flex;
         // border: 1px solid orange;
+        padding-top: 40px;
     }
 }
 
@@ -95,6 +92,13 @@
             justify-content: space-between;
             margin: 20px 0px;
         }
+        .projectIcons li {
+            width: 30px;
+            height: 30px;
+        }
+         .projectIcons li:hover, .selectedIcon {
+             padding: 5px;
+         }
         .display {
             flex-direction: column;
         }

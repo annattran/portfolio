@@ -1006,13 +1006,6 @@ input:focus, textarea:focus {
   z-index: -1;
 }
 
-.portfolio .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 40px 0px;
-}
-
 .portfolio .projectDescription {
   width: 50%;
   margin-right: 40px;
@@ -1039,6 +1032,7 @@ input:focus, textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 40px;
 }
 
 @media (max-width: 680px) {
@@ -1064,6 +1058,13 @@ input:focus, textarea:focus {
             justify-content: space-between;
     margin: 20px 0px;
   }
+  .portfolio .projectIcons li {
+    width: 30px;
+    height: 30px;
+  }
+  .portfolio .projectIcons li:hover, .portfolio .selectedIcon {
+    padding: 5px;
+  }
   .portfolio .display {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1077,6 +1078,78 @@ input:focus, textarea:focus {
   }
   .portfolio .projectNextSteps {
     width: 100%;
+  }
+}
+
+.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: calc(100% / 5);
+  margin: 20px 0px;
+}
+
+.skills i {
+  font-size: 4rem;
+  padding-bottom: 10px;
+  color: #845ec2;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.skills img {
+  width: 82px;
+  padding-bottom: 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.skills i:hover, .skills img:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.skills .break {
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .skills li {
+    width: calc(100% / 4);
+  }
+  .skills i {
+    font-size: 3rem;
+  }
+  .skills img {
+    width: 62px;
+  }
+}
+
+@media (max-width: 580px) {
+  .skills li {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills li {
+    width: calc(100% / 2);
   }
 }
 
