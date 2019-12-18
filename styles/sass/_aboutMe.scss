@@ -1,12 +1,10 @@
 .aboutMe {
     overflow:hidden;
     .images {
-        display:flex;
         height:165px;
         position: relative;
     }
     img {
-        // width:165px;
         width:calc((100% / 2) + 25px);
         border-radius:100%;
         position: absolute;
@@ -24,6 +22,21 @@
         align-items:center;
         margin: 0 auto;
         padding-top: 20px;
+    }
+    .funFacts {
+        ul {
+            margin:20px 0px;
+        }
+    }
+    .funFacts {
+        li {
+            list-style:disc;
+            margin-left: 20px;
+            color:$primaryColor;
+        }
+        li p {
+            color:black;
+        }
     }
 }
 
@@ -70,23 +83,14 @@
 @media (min-width:470px) {
     .aboutMe {
         .images {
-            justify-content: space-between;
             height:auto;
             position:static;
             width:80%;
             margin: 0 auto;
         }
         img {
-            // width:165px;
             width:calc((100% / 2) - 5px);
-            border-radius:100%;
             position: static;
-        }
-        img:first-child {
-            left:5px;
-        }
-        img:last-child {
-            right:5px;
         }
         .buttons {
             flex-direction:row;

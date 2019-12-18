@@ -265,24 +265,6 @@ h2 ~ p, h3 ~ p {
   margin: 10px 0px;
 }
 
-.funFacts ul {
-  margin: 20px 0px;
-}
-
-.funFacts li, .projectNextSteps li {
-  list-style: disc;
-  margin-left: 20px;
-  color: #845ec2;
-}
-
-.funFacts li p, .projectNextSteps li p {
-  color: black;
-}
-
-.projectNextSteps ul:first-of-type {
-  margin-bottom: 10px;
-}
-
 p {
   line-height: 1.5;
 }
@@ -738,9 +720,6 @@ aside a:hover, aside a:focus, aside a:active {
 }
 
 .aboutMe .images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 165px;
   position: relative;
 }
@@ -777,6 +756,20 @@ aside a:hover, aside a:focus, aside a:active {
   padding-top: 20px;
 }
 
+.aboutMe .funFacts ul {
+  margin: 20px 0px;
+}
+
+.aboutMe .funFacts li {
+  list-style: disc;
+  margin-left: 20px;
+  color: #845ec2;
+}
+
+.aboutMe .funFacts li p {
+  color: black;
+}
+
 @media (min-width: 303px) {
   .aboutMe .images {
     height: 185px;
@@ -809,9 +802,6 @@ aside a:hover, aside a:focus, aside a:active {
 
 @media (min-width: 470px) {
   .aboutMe .images {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     height: auto;
     position: static;
     width: 80%;
@@ -819,14 +809,7 @@ aside a:hover, aside a:focus, aside a:active {
   }
   .aboutMe img {
     width: calc((100% / 2) - 5px);
-    border-radius: 100%;
     position: static;
-  }
-  .aboutMe img:first-child {
-    left: 5px;
-  }
-  .aboutMe img:last-child {
-    right: 5px;
   }
   .aboutMe .buttons {
     -webkit-box-orient: horizontal;
@@ -1035,6 +1018,24 @@ input:focus, textarea:focus {
   padding-top: 40px;
 }
 
+.portfolio .projectNextSteps p ~ ul {
+  margin-top: 5px;
+}
+
+.portfolio .projectNextSteps li {
+  list-style: disc;
+  margin-left: 20px;
+  color: #845ec2;
+}
+
+.portfolio .projectNextSteps li p {
+  color: black;
+}
+
+.portfolio .projectNextSteps ul:first-of-type {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 680px) {
   .portfolio button {
     width: 100px;
@@ -1153,7 +1154,41 @@ input:focus, textarea:focus {
   }
 }
 
+.thankYou {
+  text-align: center;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.thankYou h2::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: #845ec2;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 15px);
+}
+
 footer {
   text-align: center;
-  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
 }

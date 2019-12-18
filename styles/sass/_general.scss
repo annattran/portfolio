@@ -69,30 +69,6 @@ h2 ~ p, h3 ~ p {
     margin: 10px 0px;
 }
 
-// p ~ p {
-//     margin-bottom: 40px;
-// }
-
-.funFacts {
-    ul {
-        margin:20px 0px;
-    }
-}
-.funFacts, .projectNextSteps {
-    li {
-        list-style:disc;
-        margin-left: 20px;
-        color:$primaryColor;
-    }
-    li p {
-        color:black;
-    }
-}
-
-.projectNextSteps ul:first-of-type {
-    margin-bottom: 10px;
-}
-
 p {
     line-height:1.5;
 }
@@ -113,11 +89,6 @@ button {
     width:100%;
     border-radius:25px;
 }
-
-// button a {
-    // display:block;
-    // width:100%;
-// }
 
 @media (min-width:470px) {
     button {

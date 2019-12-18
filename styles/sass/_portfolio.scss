@@ -4,14 +4,12 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
-        // border: 1px solid red;
         width: 100%;
     }
     .projectIcons {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        // border: 1px solid red;
     }
     .projectIcons li {
         width: 40px;
@@ -27,14 +25,11 @@
 
     .laptop {
         margin-right: 40px;
-        // width:400px;
         width: 100%;
         position: relative;
         display:flex;
         justify-content: center;
         align-items:center;
-        // border: 1px solid red;
-        // overflow:hidden;
     }
     .monitor {
         content:'';
@@ -43,17 +38,12 @@
         padding-bottom:10px;
         z-index:-1;
     }
-    // h3 {
-    //     margin-top: 40px;
-    // }
     .projectDescription {
         width: 50%;
         margin-right: 40px;
-        // border: 1px solid blue;
     }
     .projectNextSteps {
         width: 50%;
-        // border: 1px solid blue;
     }
     button {
         width: 120px;
@@ -69,8 +59,24 @@
 
     .display {
         display:flex;
-        // border: 1px solid orange;
         padding-top: 40px;
+    }
+    .projectNextSteps {
+        p ~ ul {
+            margin-top: 5px;
+        }
+        li {
+            list-style:disc;
+            margin-left: 20px;
+            color:$primaryColor;
+        }
+        li p {
+            color:black;
+        }
+    }
+
+    .projectNextSteps ul:first-of-type {
+        margin-bottom: 20px;
     }
 }
 
