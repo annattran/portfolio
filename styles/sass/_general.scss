@@ -43,14 +43,14 @@ h2::after {
     left:0;
 }
 
-h3, aside p {
+h3 {
     font-size:.8rem;
     @media (min-width:680px) {
         font-size:.9rem;
     }
 }
 
-p, button h3, label, input, textarea {
+p, button h3, label, input, textarea, button a {
     font-size:.7rem;
     @media (min-width:680px) {
         font-size:.8rem;
@@ -69,17 +69,44 @@ h2 ~ p, h3 ~ p {
     margin: 10px 0px;
 }
 
-p ~ p {
-    margin-bottom: 40px;
+// p ~ p {
+//     margin-bottom: 40px;
+// }
+
+.funFacts {
+    ul {
+        margin:20px 0px;
+    }
+}
+.funFacts, .projectNextSteps {
+    li {
+        list-style:disc;
+        margin-left: 20px;
+        color:$primaryColor;
+    }
+    li p {
+        color:black;
+    }
+}
+
+.projectNextSteps ul:first-of-type {
+    margin-bottom: 10px;
 }
 
 p {
     line-height:1.5;
 }
 
+p a {
+    color:$primaryColor;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 button {
     background:none;
-    border:1px solid transparent;
+    border:1px solid $primaryColor;
     outline:none;
     padding:6px;
     margin: 3px;
@@ -87,14 +114,16 @@ button {
     border-radius:25px;
 }
 
-button a {
-    display:block;
-    width:100%;
-}
+// button a {
+    // display:block;
+    // width:100%;
+// }
 
 @media (min-width:470px) {
     button {
         padding: 8px;
+        margin:0px;
+        width:initial;
     }
 }
 
@@ -118,7 +147,7 @@ input, textarea {
     padding: 5px;
 }
 
-.coloredButton, .greyButton {
+.coloredButton, .whiteButton {
     vertical-align: middle;
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -133,13 +162,12 @@ input, textarea {
     color:white;
 }
 
-.greyButton {
-    background:$secondColor;
-    color:$thirdColor;
+.whiteButton {
+    background:white;
+    color:$primaryColor;
 }
 
-.coloredButton::before,
-.greyButton::before {
+.coloredButton::before, .whiteButton::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -147,7 +175,6 @@ input, textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background: white;
     border-radius:25px;
     transform: scale(0);
     transition-property: transform;
@@ -155,18 +182,32 @@ input, textarea {
     transition-timing-function: ease-out;
 }
 
-.coloredButton:hover, .coloredButton:focus, .coloredButton:active,
-.greyButton:hover, .greyButton:focus, .greyButton:active {
+.coloredButton::before {
+    background: white;
+}
+
+.whiteButton::before {
+    background: $primaryColor;
+}
+
+.coloredButton:hover, .coloredButton:focus, .coloredButton:active {
     color: $primaryColor;
-    border:1px solid $primaryColor;
+}
+
+.whiteButton:hover, .whiteButton:focus, .whiteButton:active {
+    color: white;
 }
 
 .coloredButton:hover:before, .coloredButton:focus:before, .coloredButton:active:before,
-.greyButton:hover:before, .greyButton:focus:before, .greyButton:active:before {
+.whiteButton:hover:before, .whiteButton:focus:before, .whiteButton:active:before {
     transform: scale(1);
 }
 
 a {
     text-decoration: none;
     color:inherit;
+}
+
+img {
+    max-width: 100%;
 }

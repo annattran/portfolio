@@ -45,11 +45,11 @@
 
         <div class="contactInfo">
             <h3>Connect with me!</h3>
-            <div class="contactIcons">
-                <a href="mailto:annatran93@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                <a href="http://www.linkedin.com/in/annattran" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="http://www.twitter.com/itsannatran" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="http://www.github.com/annatran93" target="_blank"><i class="fab fa-github"></i></a>
+            <div class="socialIcons">
+                <a class="whiteButton" href="mailto:annatran93@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a class="whiteButton" href="http://www.linkedin.com/in/annattran" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="whiteButton" href="http://www.twitter.com/itsannatran" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="whiteButton" href="http://www.github.com/annatran93" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </aside>
@@ -77,13 +77,13 @@
             <section class="portfolio wrapper">
                 <h2>Portfolio.</h2>
                 <p>Check out some of my most recent works!</p>
-                <p>Click an icon <span class="iconPosition">on the right</span> to view a project and find out more.</p>
-                <div class="iconsAndMonitor">
+                <p><strong>Hint:</strong> Click an icon to view a project and find out more.</p>
+                <div class="monitorAndProjects">
                     <ul class="projectIcons">
-                        <li class="projectIcon marioMatchMania">
+                        <li class="projectIcon marioMatchMania selectedIcon">
                             <img src="assets/marioMatchMania.png" alt="">
                         </li>
-                        <li class="projectIcon weddingGuestbook selectedIcon">
+                        <li class="projectIcon weddingGuestbook">
                             <img src="assets/weddingGuestbook.png" alt="">
                         </li>
                         <li class="projectIcon payrollTimesheet">
@@ -96,20 +96,168 @@
                     <div class="laptop">
                         <img src="assets/laptop.png" alt="">
                         <div class="monitor">
-                            <img src="assets/weddingGuestbook.gif">
+                            <img src="assets/marioMatchMania.gif">
+                        </div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="aboutProject marioMatchMania display">
+                        <div class="projectDescription">
+                            <h3>Mario Match Mania.</h3>
+                            <p>A Mario-themed memory card game with sound effects from the original game for nostalgic game play!</p>
+                            <button class="coloredButton">
+                                <a href="https://annatran93.github.io/project-03-anna-tran/" target="_blank">View Live</a>
+                            </button>
+                            <button class="coloredButton">
+                                <a href="">Visit Repo</a>
+                            </button>
+                        </div>
+                        <div class="projectNextSteps">
+                            <p>Tech Stack:</p>
+                            <ul class="techStack">
+                                <li>
+                                    <p><span class="stack">HTML5</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">SCSS</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">JQuery</span></p>
+                                </li>
+                            </ul>
+                            <p>In the future I'd like to:</p>
+                            <ul>
+                                <li><p>Add levels of difficulty</p></li>
+                                <li><p>Implement a timer</p></li>
+                                <li><p>Create a scoreboard</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aboutProject weddingGuestbook">
+                        <div class="projectDescription">
+                            <h3>Wedding Guestbook.</h3>
+                            <p>A digital take on the traditional guestbook where guests can record a video and submit it with their name and
+                                message.</p>
+                            <button class="coloredButton">
+                                <a href="https://annatran93.github.io/project-05-anna-tran/" target="_blank">View Live</a>
+                            </button>
+                            <button class="coloredButton">
+                                <a href="">Visit Repo</a>
+                            </button>
+                        </div>
+                        <div class="projectNextSteps">
+                            <p>Tech Stack:</p>
+                            <ul class="techStack">
+                                <li>
+                                    <p><span class="stack">React</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">Firebase</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">CSS</span></p>
+                                </li>
+                            </ul>
+                            <p>In the future I'd like to:</p>
+                            <ul>
+                                <li>
+                                    <p>Add admin authentication</p>
+                                </li>
+                                <li>
+                                    <p>Implement admin controls</p>
+                                </li>
+                                <li>
+                                    <p>Utilize a Bitmoji API</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aboutProject payrollTimesheet">
+                        <div class="projectDescription">
+                            <h3>Payroll Timesheet.</h3>
+                            <p>An application that allows a user to calculate how many hours they worked in a week and their gross earnings.
+                            </p>
+                            <button class="coloredButton">
+                                <a href="" target="_blank">View Live</a>
+                            </button>
+                            <button class="coloredButton">
+                                <a href="">Visit Repo</a>
+                            </button>
+                        </div>
+                        <div class="projectNextSteps">
+                            <p>Tech Stack:</p>
+                            <ul class="techStack">
+                                <li>
+                                    <p><span class="stack">HTML5</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">CSS</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">jQuery</span></p>
+                                </li>
+                            </ul>
+                            <p>In the future I'd like to:</p>
+                            <ul>
+                                <li>
+                                    <p>Add authentication</p>
+                                </li>
+                                <li>
+                                    <p>Store data</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aboutProject dineAndDash">
+                        <div class="projectDescription">
+                            <h3>Dine And Dash.</h3>
+                            <p>An application that provides a user a list of restaurants based on location. Upon selection of restaurant,
+                                directions to the closest bike station are provided so you can <em>dine and dash</em>. Created in
+                                collaboration with <a href="http://laurenhetherington.com">Lauren Heatherington</a>, <a
+                                    href="http://nicholasmckenzie.com/">Nicholas McKenzie</a> and <a
+                                    href="https://piercemorales.com/">Pierce Morales</a>.</p>
+                            <button class="coloredButton">
+                                <a href="https://dineanddashjuno.github.io/projectSix/" target="_blank">View Live</a>
+                            </button>
+                            <button class="coloredButton">
+                                <a href="">Visit Repo</a>
+                            </button>
+                        </div>
+                        <div class="projectNextSteps">
+                            <p>Tech Stack:</p>
+                            <ul class="techStack">
+                                <li>
+                                    <p><span class="stack">React</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">Yelp API</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">CityBikes API</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="stack">SCSS</span></p>
+                                </li>
+                            </ul>
+                            <p>In the future I'd like to:</p>
+                            <ul>
+                                <li>
+                                    <p>Show number of bikes available</p>
+                                </li>
+                                <li>
+                                    <p>Show bike station closest to user's home</p>
+                                </li>
+                                <li>
+                                    <p>Show number of slots available</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="project wrapper">
-                <h2>Project.</h2>
-                <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt quisquam aliquid repellendus
-                    nisi esse dicta atque ipsa nostrum alias.</p>
-            </section>
 
             <footer class="wrapper">
-                <p>Copyright 2019</p>
+                <p>Design by <a href="https://themeforest.net/user/iltaen">Iltaen</a>. Code by me.</p>
             </footer>
         </main>
     </div>
@@ -162,7 +310,8 @@
 
         const projectIcons = document.getElementsByClassName("projectIcon");
         const monitor = document.getElementsByClassName("monitor")[0];
-        
+        const projects = document.getElementsByClassName("aboutProject");
+
         for(i=0;i<projectIcons.length;i++){
             const eachProjectIcon = projectIcons[i];
 
@@ -177,20 +326,17 @@
                     siblingIcons[i].classList.remove("selectedIcon");
                     this.classList.add("selectedIcon");
                 }
+
+                for(i=0;i<projects.length;i++) {
+                    const eachAboutProject = projects[i];
+                    if(this.classList[1] === eachAboutProject.classList[1]) {
+                        eachAboutProject.classList.add("display");
+                    } else {
+                        eachAboutProject.classList.remove("display");
+                    }
+                }
             });
         };
-        
-        const iconPosition = document.getElementsByClassName("iconPosition")[0];
-        console.log(iconPosition)
-
-        window.addEventListener("resize", function() {
-            //when window is greater than 925 pixels
-            if(window.matchMedia("(max-width:680px)").matches){
-                iconPosition.innerText = "below"
-            } else {
-                iconPosition.innerText = "on the right"
-            }
-        });
 
     </script>
 

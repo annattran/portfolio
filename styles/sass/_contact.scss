@@ -18,10 +18,7 @@ label {
 
 input, textarea {
     width:100%;
-    border-top:2px solid transparent;
-    border-right:2px solid transparent;
-    border-left:2px solid transparent;
-    border-bottom: 2px solid $secondColor;
+    border: 1px solid $secondColor;
     margin-top: 20px;
     background:none;
     padding: 15px 15px 10px 15px;

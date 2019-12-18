@@ -1,68 +1,110 @@
 .portfolio {
-    .iconsAndMonitor {
+    margin-bottom: 40px;
+    .monitorAndProjects {
         display: flex;
-        flex-direction:row-reverse;
+        flex-direction: row-reverse;
         justify-content: flex-end;
+        // border: 1px solid red;
+        width: 100%;
     }
-    ul {
+    .projectIcons {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         justify-content: space-around;
+        // border: 1px solid red;
     }
-    li {
+    .projectIcons li {
         width: 40px;
-        display:flex;
-        justify-content: center;
+        height: 40px;
         cursor:pointer;
-    }
-    img {
-        max-width: 100%;
         transition:all .3s;
     }
-    li img:hover {
-        background:$secondColor;
-        border-radius:100%;
-        padding: 10px;
-    }
-    .selectedIcon {
-        background:$secondColor;
+    .projectIcons li:hover, .selectedIcon {
+        border:1px solid $primaryColor;
         border-radius:100%;
         padding: 10px;
     }
 
     .laptop {
-        margin-right: 20px;
-        width:400px;
+        margin-right: 40px;
+        // width:400px;
+        width: 100%;
         position: relative;
         display:flex;
         justify-content: center;
         align-items:center;
+        // border: 1px solid red;
         // overflow:hidden;
     }
     .monitor {
         content:'';
         position: absolute;
-        width: 75%;
+        width: 70%;
+        padding-bottom:10px;
         z-index:-1;
     }
-}
+    // h3 {
+    //     margin-top: 40px;
+    // }
+    .projects {
+        display:flex;
+        padding:40px 0px;
+    }
+    .projectDescription {
+        width: 50%;
+        margin-right: 40px;
+        // border: 1px solid blue;
+    }
+    .projectNextSteps {
+        width: 50%;
+        // border: 1px solid blue;
+    }
+    button {
+        width: 120px;
+        margin: 3px 0px;
+    }
+    .projectDescription p {
+        margin-bottom: 20px;
+    }
 
+    .aboutProject {
+        display:none;
+    }
+
+    .display {
+        display:flex;
+        // border: 1px solid orange;
+    }
+}
 
 @media(max-width:680px) {
     .portfolio {
-        .iconsAndMonitor {
-            flex-direction:column;
-        }
-        ul {
-            flex-direction:row;
-            margin-bottom: 20px;
-        }
-        .laptop {
-            width: 100%;
+        button {
+            width: 100px;
         }
     }
 }
 
-@media(max-width:590px){
-
+@media(max-width:600px) {
+    .portfolio {
+        .monitorAndProjects {
+            flex-direction: column;
+        }
+        .projectIcons {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px 0px;
+        }
+        .display {
+            flex-direction: column;
+        }
+        .projectDescription {
+            width: 100%;
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        .projectNextSteps {
+            width: 100%;
+        }
+    }
 }

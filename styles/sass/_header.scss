@@ -131,19 +131,22 @@ aside a:hover, aside a:focus, aside a:active {
   margin: 20px 50px 0px 50px;
 }
 
-.contactIcons {
+.socialIcons {
   display:flex;
-  i {
+  a {
     width:50px;
     height:50px;
     display:flex;
     justify-content: center;
     align-items:center;
     border-radius:100%;
+    background:white;
+    color:$primaryColor;
+    border:1px solid $primaryColor;
+    margin:20px 10px 0px 0px;
+  }
+  i {
     font-size:1rem;
-    background:$secondColor;
-    color:$thirdColor;
-    margin-right: 10px;
   }
 }
 
@@ -197,7 +200,7 @@ aside a:hover, aside a:focus, aside a:active {
         width: 300px;
         height: 300px;
         margin: 80px 50px 50px 50px;
-        border: 5px solid $secondColor;
+        border: 5px solid $primaryColor;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -231,14 +234,14 @@ aside a:hover, aside a:focus, aside a:active {
     }
 
     .inactivePage {
-      color:$secondColor;
+      color:$primaryColor;
     }
     
     .circleMenu li:hover, .circleMenu li:focus, .circleMenu li:active,
     .circleMenu a:hover, .circleMenu a:focus, .circleMenu a:active,
     .activePage {
-      background:$secondColor;
-      color:$primaryColor;
+      background:$primaryColor;
+      color:white;
     }
     .circleMenu li:nth-child(1) {
         transform: rotate(45deg) skew(0deg);

@@ -227,28 +227,28 @@ h2::after {
   content: '';
   width: 30px;
   height: 3px;
-  background: #01d3a9;
+  background: #845ec2;
   position: absolute;
   bottom: -10px;
   left: 0;
 }
 
-h3, aside p {
+h3 {
   font-size: .8rem;
 }
 
 @media (min-width: 680px) {
-  h3, aside p {
+  h3 {
     font-size: .9rem;
   }
 }
 
-p, button h3, label, input, textarea {
+p, button h3, label, input, textarea, button a {
   font-size: .7rem;
 }
 
 @media (min-width: 680px) {
-  p, button h3, label, input, textarea {
+  p, button h3, label, input, textarea, button a {
     font-size: .8rem;
   }
 }
@@ -265,17 +265,39 @@ h2 ~ p, h3 ~ p {
   margin: 10px 0px;
 }
 
-p ~ p {
-  margin-bottom: 40px;
+.funFacts ul {
+  margin: 20px 0px;
+}
+
+.funFacts li, .projectNextSteps li {
+  list-style: disc;
+  margin-left: 20px;
+  color: #845ec2;
+}
+
+.funFacts li p, .projectNextSteps li p {
+  color: black;
+}
+
+.projectNextSteps ul:first-of-type {
+  margin-bottom: 10px;
 }
 
 p {
   line-height: 1.5;
 }
 
+p a {
+  color: #845ec2;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
 button {
   background: none;
-  border: 1px solid transparent;
+  border: 1px solid #845ec2;
   outline: none;
   padding: 6px;
   margin: 3px;
@@ -283,19 +305,16 @@ button {
   border-radius: 25px;
 }
 
-button a {
-  display: block;
-  width: 100%;
-}
-
 @media (min-width: 470px) {
   button {
     padding: 8px;
+    margin: 0px;
+    width: initial;
   }
 }
 
 .color {
-  color: #01d3a9;
+  color: #845ec2;
 }
 
 .wrapper {
@@ -317,7 +336,7 @@ input, textarea {
   padding: 5px;
 }
 
-.coloredButton, .greyButton {
+.coloredButton, .whiteButton {
   vertical-align: middle;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -333,17 +352,16 @@ input, textarea {
 }
 
 .coloredButton {
-  background: #01d3a9;
+  background: #845ec2;
   color: white;
 }
 
-.greyButton {
-  background: #e8e8e8;
-  color: #a2a2a2;
+.whiteButton {
+  background: white;
+  color: #845ec2;
 }
 
-.coloredButton::before,
-.greyButton::before {
+.coloredButton::before, .whiteButton::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -351,7 +369,6 @@ input, textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background: white;
   border-radius: 25px;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -365,14 +382,24 @@ input, textarea {
           transition-timing-function: ease-out;
 }
 
-.coloredButton:hover, .coloredButton:focus, .coloredButton:active,
-.greyButton:hover, .greyButton:focus, .greyButton:active {
-  color: #01d3a9;
-  border: 1px solid #01d3a9;
+.coloredButton::before {
+  background: white;
+}
+
+.whiteButton::before {
+  background: #845ec2;
+}
+
+.coloredButton:hover, .coloredButton:focus, .coloredButton:active {
+  color: #845ec2;
+}
+
+.whiteButton:hover, .whiteButton:focus, .whiteButton:active {
+  color: white;
 }
 
 .coloredButton:hover:before, .coloredButton:focus:before, .coloredButton:active:before,
-.greyButton:hover:before, .greyButton:focus:before, .greyButton:active:before {
+.whiteButton:hover:before, .whiteButton:focus:before, .whiteButton:active:before {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -380,6 +407,10 @@ input, textarea {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img {
+  max-width: 100%;
 }
 
 .pageContent {
@@ -391,7 +422,7 @@ header::before {
   height: 250px;
   width: 250px;
   border-radius: 100%;
-  background: #01d3a9;
+  background: #845ec2;
   top: -170px;
   left: -150px;
   position: absolute;
@@ -403,7 +434,7 @@ header::before {
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background: #01d3a9;
+  background: #845ec2;
   position: fixed;
   cursor: pointer;
   right: 20px;
@@ -474,7 +505,7 @@ aside {
   top: 0;
   /* Stay at the top */
   left: 0;
-  background-color: #01d3a9;
+  background-color: #845ec2;
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -520,7 +551,7 @@ aside i {
 
 /* When you mouse over the navigation links, change their color */
 aside a:hover, aside a:focus, aside a:active {
-  color: #01d3a9;
+  color: #845ec2;
   background: white;
 }
 
@@ -537,13 +568,13 @@ aside a:hover, aside a:focus, aside a:active {
   margin: 20px 50px 0px 50px;
 }
 
-.contactIcons {
+.socialIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contactIcons i {
+.socialIcons a {
   width: 50px;
   height: 50px;
   display: -webkit-box;
@@ -556,10 +587,14 @@ aside a:hover, aside a:focus, aside a:active {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100%;
+  background: white;
+  color: #845ec2;
+  border: 1px solid #845ec2;
+  margin: 20px 10px 0px 0px;
+}
+
+.socialIcons i {
   font-size: 1rem;
-  background: #e8e8e8;
-  color: #a2a2a2;
-  margin-right: 10px;
 }
 
 @media (min-width: 470px) {
@@ -609,7 +644,7 @@ aside a:hover, aside a:focus, aside a:active {
     width: 300px;
     height: 300px;
     margin: 80px 50px 50px 50px;
-    border: 5px solid #e8e8e8;
+    border: 5px solid #845ec2;
     border-radius: 50%;
     overflow: hidden;
   }
@@ -639,13 +674,13 @@ aside a:hover, aside a:focus, aside a:active {
     height: 200px;
   }
   .inactivePage {
-    color: #e8e8e8;
+    color: #845ec2;
   }
   .circleMenu li:hover, .circleMenu li:focus, .circleMenu li:active,
   .circleMenu a:hover, .circleMenu a:focus, .circleMenu a:active,
   .activePage {
-    background: #e8e8e8;
-    color: #01d3a9;
+    background: #845ec2;
+    color: white;
   }
   .circleMenu li:nth-child(1) {
     -webkit-transform: rotate(45deg) skew(0deg);
@@ -804,7 +839,7 @@ aside a:hover, aside a:focus, aside a:active {
     width: 40%;
     z-index: 1;
   }
-  .aboutMe .greyButton {
+  .aboutMe .whiteButton {
     position: relative;
     left: -40px;
     width: 60%;
@@ -830,52 +865,6 @@ aside a:hover, aside a:focus, aside a:active {
   }
 }
 
-.singleExperience {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.singleExperience p {
-  margin: 0px 0px 10px 0px;
-}
-
-.singleExperience:nth-of-type(3) {
-  margin-bottom: 40px;
-}
-
-.experienceLine {
-  content: '';
-  height: 180px;
-  width: 10px;
-  margin-right: 40px;
-  background: #e8e8e8;
-  position: relative;
-  border-radius: 5px;
-}
-
-.experienceDot {
-  content: '';
-  position: absolute;
-  top: -5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: #01d3a9;
-}
-
-.experienceContent {
-  width: calc(100% - 6px);
-}
-
-.date, .jobTitle {
-  font-weight: 700;
-}
-
-.jobTitle {
-  font-size: .9rem;
-}
-
 .singleFormField {
   position: relative;
 }
@@ -890,15 +879,12 @@ label {
 }
 
 .required {
-  color: #01d3a9;
+  color: #845ec2;
 }
 
 input, textarea {
   width: 100%;
-  border-top: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-bottom: 2px solid #e8e8e8;
+  border: 1px solid #767676;
   margin-top: 20px;
   background: none;
   padding: 15px 15px 10px 15px;
@@ -910,7 +896,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-  border: 2px solid #01d3a9;
+  border: 2px solid #845ec2;
 }
 
 .contact .coloredButton {
@@ -953,7 +939,11 @@ input:focus, textarea:focus {
   }
 }
 
-.portfolio .iconsAndMonitor {
+.portfolio {
+  margin-bottom: 40px;
+}
+
+.portfolio .monitorAndProjects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -964,9 +954,10 @@ input:focus, textarea:focus {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  width: 100%;
 }
 
-.portfolio ul {
+.portfolio .projectIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -978,38 +969,23 @@ input:focus, textarea:focus {
       justify-content: space-around;
 }
 
-.portfolio li {
+.portfolio .projectIcons li {
   width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 40px;
   cursor: pointer;
-}
-
-.portfolio img {
-  max-width: 100%;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-.portfolio li img:hover {
-  background: #e8e8e8;
-  border-radius: 100%;
-  padding: 10px;
-}
-
-.portfolio .selectedIcon {
-  background: #e8e8e8;
+.portfolio .projectIcons li:hover, .portfolio .selectedIcon {
+  border: 1px solid #845ec2;
   border-radius: 100%;
   padding: 10px;
 }
 
 .portfolio .laptop {
-  margin-right: 20px;
-  width: 400px;
+  margin-right: 40px;
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1025,25 +1001,81 @@ input:focus, textarea:focus {
 .portfolio .monitor {
   content: '';
   position: absolute;
-  width: 75%;
+  width: 70%;
+  padding-bottom: 10px;
   z-index: -1;
 }
 
+.portfolio .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0px;
+}
+
+.portfolio .projectDescription {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.portfolio .projectNextSteps {
+  width: 50%;
+}
+
+.portfolio button {
+  width: 120px;
+  margin: 3px 0px;
+}
+
+.portfolio .projectDescription p {
+  margin-bottom: 20px;
+}
+
+.portfolio .aboutProject {
+  display: none;
+}
+
+.portfolio .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 680px) {
-  .portfolio .iconsAndMonitor {
+  .portfolio button {
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio .monitorAndProjects {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .portfolio ul {
+  .portfolio .projectIcons {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px 0px;
+  }
+  .portfolio .display {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio .projectDescription {
+    width: 100%;
+    margin-right: 0px;
     margin-bottom: 20px;
   }
-  .portfolio .laptop {
+  .portfolio .projectNextSteps {
     width: 100%;
   }
 }
