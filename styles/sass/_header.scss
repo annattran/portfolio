@@ -85,7 +85,7 @@ aside {
   z-index: 100; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: $primaryColor; /* Black*/
+  background-color: $primaryColor; 
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -128,7 +128,7 @@ aside a:hover, aside a:focus, aside a:active {
 
 .contactInfo {
   display:none;
-  margin: 20px 50px 0px 50px;
+  margin: 0px 50px 20px 50px;
 }
 
 .socialIcons {
@@ -164,6 +164,9 @@ aside a:hover, aside a:focus, aside a:active {
     aside {
       width: 400px;
       background:none;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
     aside a {
       transition:none;
@@ -176,7 +179,6 @@ aside a:hover, aside a:focus, aside a:active {
     }
     .headerContent {
       position: fixed;
-      margin-top: -40px;
     }
     .aboutMe {
       margin-top: 40px;
@@ -184,10 +186,10 @@ aside a:hover, aside a:focus, aside a:active {
     .contactInfo {
       display:block;
     }
-
-
-
-
+    header.wrapper {
+      width: 100%;
+      margin-left: 50px;
+    }
     .circleMenu {
         position: relative;
         z-index:100;

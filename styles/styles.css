@@ -204,9 +204,9 @@ h1 {
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 925px) {
   h1 {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 }
 
@@ -488,7 +488,6 @@ aside {
   /* Stay at the top */
   left: 0;
   background-color: #845ec2;
-  /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 60px;
@@ -547,7 +546,7 @@ aside a:hover, aside a:focus, aside a:active {
 
 .contactInfo {
   display: none;
-  margin: 20px 50px 0px 50px;
+  margin: 0px 50px 20px 50px;
 }
 
 .socialIcons {
@@ -593,6 +592,16 @@ aside a:hover, aside a:focus, aside a:active {
   aside {
     width: 400px;
     background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   aside a {
     -webkit-transition: none;
@@ -606,13 +615,16 @@ aside a:hover, aside a:focus, aside a:active {
   }
   .headerContent {
     position: fixed;
-    margin-top: -40px;
   }
   .aboutMe {
     margin-top: 40px;
   }
   .contactInfo {
     display: block;
+  }
+  header.wrapper {
+    width: 100%;
+    margin-left: 50px;
   }
   .circleMenu {
     position: relative;
@@ -736,6 +748,31 @@ aside a:hover, aside a:focus, aside a:active {
 
 .aboutMe img:last-child {
   right: -30px;
+}
+
+.aboutMe button {
+  padding: 18px;
+}
+
+.aboutMe button a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutMe .whiteButton a {
+  margin-left: 20px;
 }
 
 .aboutMe .buttons {
@@ -875,7 +912,7 @@ input, textarea {
 
 textarea {
   resize: none;
-  height: 150px;
+  height: 250px;
 }
 
 input:focus, textarea:focus {
@@ -984,7 +1021,7 @@ input:focus, textarea:focus {
 .portfolio .monitor {
   content: '';
   position: absolute;
-  width: 70%;
+  width: 72%;
   padding-bottom: 10px;
   z-index: -1;
 }
