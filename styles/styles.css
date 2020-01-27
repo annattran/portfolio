@@ -179,6 +179,54 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    opacity: 0%;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0%;
+  }
+}
+
 html {
   font-size: 125%;
   font-family: "Montserrat", sans-serif;
@@ -987,9 +1035,10 @@ input:focus, textarea:focus {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
 }
 
-.portfolio .projectIcons li {
+.portfolio .projectIcons li:not(.arrow) {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -997,10 +1046,32 @@ input:focus, textarea:focus {
   transition: all .3s;
 }
 
-.portfolio .projectIcons li:hover, .portfolio .selectedIcon {
+.portfolio .projectIcons li:not(.arrow):hover, .portfolio .selectedIcon {
   border: 1px solid #845ec2;
   border-radius: 100%;
   padding: 10px;
+}
+
+.portfolio .arrow {
+  position: absolute;
+  left: 20%;
+}
+
+.portfolio .downArrow {
+  -webkit-animation: slideDown 1.5s linear infinite;
+          animation: slideDown 1.5s linear infinite;
+  top: 0;
+}
+
+.portfolio .upArrow {
+  -webkit-animation: slideUp 1.5s linear infinite;
+          animation: slideUp 1.5s linear infinite;
+  bottom: 0;
+}
+
+.portfolio i {
+  font-size: 2rem;
+  color: #845ec2;
 }
 
 .portfolio .laptop {
@@ -1096,12 +1167,15 @@ input:focus, textarea:focus {
             justify-content: space-between;
     margin: 20px 0px;
   }
-  .portfolio .projectIcons li {
+  .portfolio .projectIcons li:not(.arrow) {
     width: 30px;
     height: 30px;
   }
-  .portfolio .projectIcons li:hover, .portfolio .selectedIcon {
+  .portfolio .projectIcons li:not(.arrow):hover, .portfolio .selectedIcon {
     padding: 5px;
+  }
+  .portfolio .arrow {
+    display: none;
   }
   .portfolio .display {
     -webkit-box-orient: vertical;
