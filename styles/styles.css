@@ -179,50 +179,50 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-@-webkit-keyframes slideDown {
+@-webkit-keyframes slideRight {
   0% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
   }
   100% {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
     opacity: 0%;
   }
 }
 
-@keyframes slideDown {
+@keyframes slideRight {
   0% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
   }
   100% {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
     opacity: 0%;
   }
 }
 
-@-webkit-keyframes slideUp {
+@-webkit-keyframes slideLeft {
   0% {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
   100% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
     opacity: 0%;
   }
 }
 
-@keyframes slideUp {
+@keyframes slideLeft {
   0% {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
   100% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
     opacity: 0%;
   }
 }
@@ -1015,13 +1015,10 @@ input:focus, textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
@@ -1029,12 +1026,15 @@ input:focus, textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  margin: 20px auto;
   position: relative;
 }
 
@@ -1054,19 +1054,18 @@ input:focus, textarea:focus {
 
 .portfolio .arrow {
   position: absolute;
-  left: 20%;
 }
 
-.portfolio .downArrow {
-  -webkit-animation: slideDown 1.5s linear infinite;
-          animation: slideDown 1.5s linear infinite;
-  top: 0;
+.portfolio .rightArrow {
+  -webkit-animation: slideRight 1.5s linear infinite;
+          animation: slideRight 1.5s linear infinite;
+  left: 0px;
 }
 
-.portfolio .upArrow {
-  -webkit-animation: slideUp 1.5s linear infinite;
-          animation: slideUp 1.5s linear infinite;
-  bottom: 0;
+.portfolio .leftArrow {
+  -webkit-animation: slideLeft 1.5s linear infinite;
+          animation: slideLeft 1.5s linear infinite;
+  right: 0px;
 }
 
 .portfolio i {
@@ -1151,21 +1150,8 @@ input:focus, textarea:focus {
 }
 
 @media (max-width: 600px) {
-  .portfolio .monitorAndProjects {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .portfolio .projectIcons {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 20px 0px;
+    width: 100%;
   }
   .portfolio .projectIcons li:not(.arrow) {
     width: 30px;

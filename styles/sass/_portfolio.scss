@@ -2,14 +2,15 @@
     margin-bottom: 40px;
     .monitorAndProjects {
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
+        flex-direction: column;
         width: 100%;
     }
     .projectIcons {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        margin: 20px auto;
         position: relative;
     }
     .projectIcons li:not(.arrow) {
@@ -25,15 +26,14 @@
     }
     .arrow {
         position: absolute;
-        left:20%;
     }
-    .downArrow {
-        animation: slideDown 1.5s linear infinite;
-        top:0;
+    .rightArrow {
+        animation: slideRight 1.5s linear infinite;
+        left:0px;
     }
-    .upArrow {
-        animation: slideUp 1.5s linear infinite;
-        bottom:0;
+    .leftArrow {
+        animation: slideLeft 1.5s linear infinite;
+        right:0px;
     }
     i {
         font-size:2rem;
@@ -106,13 +106,8 @@
 
 @media(max-width:600px) {
     .portfolio {
-        .monitorAndProjects {
-            flex-direction: column;
-        }
         .projectIcons {
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 20px 0px;
+            width: 100%;
         }
         .projectIcons li:not(.arrow) {
             width: 30px;

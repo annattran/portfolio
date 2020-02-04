@@ -1,19 +1,19 @@
-@keyframes slideDown {
+@keyframes slideRight {
     0% {
-        transform: translateY(-200%);
+        transform: translateX(-100px);
     }
     100% {
-        transform: translateY(-50%);
+        transform: translateX(-50px);
         opacity:0%;
     }
 }
 
-@keyframes slideUp {
+@keyframes slideLeft {
     0% {
-        transform: translateY(200%);
+        transform: translateX(100px);
     }
     100% {
-        transform: translateY(50%);
+        transform: translateX(50px);
         opacity:0%;
     }
 }
